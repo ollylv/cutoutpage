@@ -1,0 +1,107 @@
+.content-wrapper {
+  position: relative;
+  width: 500px;
+  height: 100%;
+  margin: 40px 52px 0 69px;
+  .heading {
+    h1 {
+      margin: 0 0 0 -1px;
+      font-size: 24px;
+      font-weight: 400;
+      color: #475055;
+    }
+  }
+  .paragraph {
+    overflow-y: hidden;
+    overflow-x: hidden; //firefox ;/
+    width: 499px;
+    height: 102px;
+    margin: 29px 0 0 0;
+    p {
+      width: 485px;
+      margin: 0;
+      word-wrap: break-word;
+      font-size: 15px;
+      font-weight: 400;
+      color: #475055;
+      a {
+        padding: 0 120px 0 0;
+        z-index: 1;
+        color: #ea6060;
+        text-decoration: none;
+        cursor: pointer;
+        cursor: hand;
+
+      }
+    }
+  }
+  .comments {
+    display: inline-table;
+    width: 100%;
+    height: auto;
+    margin: 29px 0 0 0;
+    .comment-button :hover {
+      font-weight: 600;
+    }
+    .comment-button {
+      display: inline-block;
+      position: relative;
+      width: 166px;
+      height: 49px;
+      margin: 0 20px 0 0;
+      border: 2px solid #56ccc8;
+      cursor: pointer;
+      cursor: hand;
+      p {
+        margin: 0;
+        color: #4bc7c7;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        @include centerr;
+      }
+    }
+    .comment-add-text {
+      position: relative;
+      display: inline-block;
+      width: 166px;
+      height: 49px;
+      margin: 0 20px 0 0;
+      textarea {
+        width: 166px;
+        height: 49px;
+        border: 2px solid #56ccc8;
+        resize: none;
+        text-align: center;
+      }
+    }
+    .send-button :hover{
+      font-weight: 600;
+    }
+    .send-button {
+      position: relative;
+      display: inline-block;
+      width: 49px;
+      height: 49px;
+      background: #56ccc8;
+      cursor: pointer;
+      cursor: hand;
+      p {
+        margin: 0;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        @include centerr;
+      }
+
+    }
+  }
+  .comment-container {
+    width: 100%;
+    min-height: 40px;
+    word-wrap: break-word;
+  }
+}
+
+

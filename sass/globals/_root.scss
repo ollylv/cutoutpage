@@ -1,0 +1,45 @@
+@import "mixins";
+@import "variables";
+
+
+
+
+body, html{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 700px;
+  height: auto;
+  min-height: 660px;
+  margin: 0 auto;
+  padding: 85px 37px 55px 43px;
+  background-color: #082e3c;
+  font-family: Arial;
+
+}
+
+.header {
+  width: 620px;
+  height: 300px;
+  background: url("../img/header.png");
+}
+
+.content {
+  position: relative;
+  width: 620px;
+  min-height: 340px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  background-color: #082e3c;
+}
