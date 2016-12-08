@@ -32,18 +32,19 @@ body, html {
   height: 55px;
   background-color: #082e3c; }
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 600px) {
   body, html {
     margin: 0 !important; }
 
   .main-container {
-    max-width: 480px !important;
+    max-width: 400px !important;
     margin: 0 !important;
     padding: 0;
     background: none; }
 
   .header {
-    max-width: 400px !important; }
+    max-width: 400px !important;
+    margin: 0 !important; }
 
   .contents {
     max-width: 400px !important; }
