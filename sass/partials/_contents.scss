@@ -12,10 +12,11 @@
     }
   }
   .paragraph {
+    position: relative;
     overflow-y: hidden;
     overflow-x: hidden; //firefox ;/
     width: 499px;
-    height: 102px;
+    height: 105px;
     margin: 29px 0 0 0;
     p {
       width: 485px;
@@ -24,15 +25,18 @@
       font-size: 15px;
       font-weight: 400;
       color: #475055;
-      a {
-        padding: 0 120px 0 0;
-        z-index: 1;
-        color: #ea6060;
-        text-decoration: none;
-        cursor: pointer;
-        cursor: hand;
-
-      }
+    }
+    a {
+      position: absolute;
+      top: 81%;
+      left: 53%;
+      padding: 0 130px 0 4px;
+      z-index: 100;
+      background-color: #ffffff;
+      color: #ea6060;
+      text-decoration: none;
+      cursor: pointer;
+      cursor: hand;
     }
   }
   .comments {
