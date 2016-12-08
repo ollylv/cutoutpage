@@ -1,17 +1,14 @@
-@media all and (max-width: 600px) {
+@media all and (max-width: 540px) {
 
   body,html {
     margin: 0 !important;
   }
-
   .main-container {
     max-width: 400px !important;
     margin: 0 !important;
     padding: 0;
     background: none;
   }
-
-
   .header {
     max-width: 400px !important;
     margin: 0 !important;
@@ -23,7 +20,6 @@
     max-width: 360px !important;
     margin: 0 auto !important;
   }
-
   .heading {
     margin-top: 20px;
   }
@@ -46,14 +42,11 @@
   .right-side-bar {
     display: none;
   }
-
   .comment-button {
     width: 120px !important;
     height: 49px !important;
     margin: 0 2px 0 0 !important;
-
   }
-
   .comment-add-text {
     margin: 0 2px 0 0 !important;
     width: 120px !important;
@@ -64,11 +57,6 @@
       margin: 0 2px 0 0 !important;
     }
   }
-
-
-
-
-
 
 }
 

@@ -32,7 +32,7 @@ body, html {
   height: 55px;
   background-color: #082e3c; }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 540px) {
   body, html {
     margin: 0 !important; }
 
