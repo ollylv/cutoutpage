@@ -85,7 +85,35 @@ body, html {
     .comment-add-text #comment-textarea {
       width: 120px !important;
       height: 49px !important;
-      margin: 0 2px 0 0 !important; } }
+      margin: 0 2px 0 0 !important; }
+
+  .comment-container {
+    max-width: 320px !important; }
+    .comment-container .comment-holder p {
+      width: 100% !important;
+      max-width: 280px !important; } }
+.triangle {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 120px 120px 0 0;
+  border-color: #ea6060 transparent transparent transparent; }
+  .triangle p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -95px 0 57px 14px;
+    font-size: 23px;
+    color: #ffffff;
+    font-weight: 400;
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg); }
+
 .content-wrapper {
   position: relative;
   width: 500px;
@@ -181,30 +209,26 @@ body, html {
         transform: translate(-50%, -50%); }
   .content-wrapper .comment-container {
     width: 100%;
-    min-height: 40px;
-    word-wrap: break-word; }
-
-.triangle {
-  position: relative;
-  display: block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 120px 120px 0 0;
-  border-color: #ea6060 transparent transparent transparent; }
-  .triangle p {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -95px 0 57px 14px;
-    font-size: 23px;
-    color: #ffffff;
-    font-weight: 400;
-    -ms-transform: rotate(-45deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-45deg);
-    /* Chrome, Safari, Opera */
-    transform: rotate(-45deg); }
+    min-height: 40px; }
+    .content-wrapper .comment-container .comment-holder {
+      display: inline-table;
+      margin: 2px 0 5px 0; }
+      .content-wrapper .comment-container .comment-holder p {
+        display: table-cell;
+        width: 100%;
+        max-width: 450px;
+        padding: 5px;
+        border: solid 1px #4bc7c7;
+        word-wrap: break-word; }
+      .content-wrapper .comment-container .comment-holder span {
+        display: table-cell;
+        float: right;
+        margin-left: 10px;
+        padding: 5px 10px;
+        color: #ffffff;
+        background-color: #ba1437;
+        cursor: pointer;
+        cursor: hand; }
 
 .social {
   width: 100%;

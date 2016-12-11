@@ -57,6 +57,15 @@
       margin: 0 2px 0 0 !important;
     }
   }
+  .comment-container {
+    max-width: 320px !important;
+    .comment-holder {
+      p {
+        width: 100% !important;
+        max-width: 280px !important;
+      }
+    }
+  }
 
 }
 

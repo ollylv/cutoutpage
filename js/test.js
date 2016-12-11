@@ -1,9 +1,18 @@
 $(document).ready(function(){
 
+    //cashing DOM selectors
+
+    var $commentButton = $('.comment-button');
+    var $commentTextareawrapper = $('.comment-add-text');
+    var $commentTextarea = $('#comment-textarea');
+    var $sendButton = $('.send-button');
+    var $commentCounterspan = $('.comment span');
+
+
     //hidden on load
 
-    $('.comment-add-text').hide();
-    $('.send-button').hide();
+    $commentTextareawrapper.hide();
+    $sendButton.hide();
 
     //click listeners
 
@@ -12,30 +21,45 @@ $(document).ready(function(){
         $('.paragraph').css('overflow-y',"auto");
     });
 
-    $('.comment-button').on('click', function(){
-        $('#comment-textarea').val('');
-        $('.comment-add-text').toggle('fast', function(){
-            $('.send-button').toggle('fast');
+    $commentButton.on('click', function(){
+        $commentTextarea.val('');
+        $commentTextareawrapper.toggle('fast', function(){
+            $sendButton.toggle('fast');
         });
     });
 
-    $('.send-button').on('click', function(){
-       $('.comment-container').append('<p>'+ $('#comment-textarea').val() +'</p>');
-       $('.comment-add-text').toggle('fast', function(){
-            $('.send-button').toggle('fast');
-        });
+    $sendButton.on('click', function(){
 
-        //little something something
-        commentCounter();
-    });
+        //input validation if input has a value and also doesn't contain spaces
 
-    function commentCounter(){
-        if($('.comment-container').length > 0 && $('.comment-container p:last').text().length > 0){
-            var currCommentvalue = $('.comment span').text();
+         if($commentTextarea.val() && !(/^\s+$/.test($commentTextarea.val()))){
+
+            //comment counter
+
+            var currCommentvalue = $commentCounterspan.text();
+
             currCommentvalue = ++currCommentvalue;
-            $('.comment span').text(currCommentvalue);
+            $commentCounterspan.text(currCommentvalue);
+
+            //adding comment
+
+            $('.comment-container').append('<div class="comment-holder"><p>' + $commentTextarea.val() + '</p>' + '<span class="delete-button">' + 'X' + '</span></div>');
+            $commentTextareawrapper.toggle('fast', function(){
+                $sendButton.toggle('fast');
+            });
+
+        } else {
+            alert('Please add a comment with text');
         }
-    }
+
+    });
+
+    //comment deletion
+
+    $(document).on('click','.delete-button', function(){
+        $(this).parent().remove();
+    });
+
 });
 
 
