@@ -57,33 +57,34 @@ body, html {
     margin-top: 20px; }
 
   .paragraph {
-    max-width: 320px !important;
-    overflow: visible; }
+    max-width: 350px !important;
+    height: auto !important;
+    overflow: visible;
+    text-align: justify; }
     .paragraph p {
-      width: 300px !important; }
+      width: 350px !important; }
     .paragraph a {
       width: 100%;
       top: 83%;
-      left: 55% !important;
-      padding: 0 20px 0 20px !important; }
+      left: 55% !important; }
 
   .content {
-    max-width: 320px !important; }
+    max-width: 350px !important; }
 
   .right-side-bar {
     display: none; }
 
   .comment-button {
-    width: 120px !important;
+    width: 33% !important;
     height: 49px !important;
     margin: 0 2px 0 0 !important; }
 
   .comment-add-text {
     margin: 0 2px 0 0 !important;
-    width: 120px !important;
+    width: 64% !important;
     height: 49px !important; }
     .comment-add-text #comment-textarea {
-      width: 120px !important;
+      width: 90% !important;
       height: 49px !important;
       margin: 0 2px 0 0 !important; }
 
@@ -125,7 +126,6 @@ body, html {
     font-weight: 400;
     color: #475055; }
   .content-wrapper .paragraph {
-    position: relative;
     overflow-y: hidden;
     overflow-x: hidden;
     width: 499px;
@@ -138,13 +138,9 @@ body, html {
       font-size: 15px;
       font-weight: 400;
       color: #475055; }
+      .content-wrapper .paragraph p span {
+        display: none; }
     .content-wrapper .paragraph a {
-      position: absolute;
-      top: 81%;
-      left: 53%;
-      padding: 0 130px 0 4px;
-      z-index: 100;
-      background-color: #ffffff;
       color: #ea6060;
       text-decoration: none;
       cursor: pointer;
@@ -159,9 +155,9 @@ body, html {
     .content-wrapper .comments .comment-button {
       display: inline-block;
       position: relative;
-      width: 166px;
+      width: 33.5%;
       height: 49px;
-      margin: 0 20px 0 0;
+      margin: 0 5px 0 0;
       border: 2px solid #56ccc8;
       cursor: pointer;
       cursor: hand; }
@@ -176,13 +172,12 @@ body, html {
         left: 50%;
         transform: translate(-50%, -50%); }
     .content-wrapper .comments .comment-add-text {
-      position: relative;
       display: inline-block;
-      width: 166px;
+      width: 58%;
       height: 49px;
-      margin: 0 20px 0 0; }
+      margin: 0 5px 0 0; }
       .content-wrapper .comments .comment-add-text textarea {
-        width: 166px;
+        width: 90%;
         height: 49px;
         border: 2px solid #56ccc8;
         resize: none;
@@ -192,8 +187,9 @@ body, html {
     .content-wrapper .comments .send-button {
       position: relative;
       display: inline-block;
-      width: 49px;
+      width: 33.5%;
       height: 49px;
+      margin: 0 5px 0 0;
       background: #56ccc8;
       cursor: pointer;
       cursor: hand; }
@@ -207,6 +203,24 @@ body, html {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
+    .content-wrapper .comments .alert-container {
+      display: inline-block;
+      vertical-align: top;
+      width: 52.2%;
+      height: 49px;
+      text-align: center;
+      padding: 0;
+      margin: 0; }
+      .content-wrapper .comments .alert-container .alert-first {
+        display: none;
+        margin-top: 10px;
+        font-size: 125%;
+        color: #ff0000; }
+      .content-wrapper .comments .alert-container .alert-second {
+        display: none;
+        margin-top: 10px;
+        font-size: 125%;
+        color: #ff0000; }
   .content-wrapper .comment-container {
     width: 100%;
     min-height: 40px; }

@@ -32,7 +32,6 @@
   }
 
   .paragraph {
-    position: relative;
     overflow-y: hidden;
     overflow-x: hidden; //firefox ;/
     width: 499px;
@@ -45,14 +44,11 @@
       font-size: 15px;
       font-weight: 400;
       color: #475055;
+      span {
+        display: none;
+      }
     }
     a {
-      position: absolute;
-      top: 81%;
-      left: 53%;
-      padding: 0 130px 0 4px;
-      z-index: 100;
-      background-color: #ffffff;
       color: #ea6060;
       text-decoration: none;
       cursor: pointer;
@@ -70,9 +66,9 @@
     .comment-button {
       display: inline-block;
       position: relative;
-      width: 166px;
+      width: 33.5%;
       height: 49px;
-      margin: 0 20px 0 0;
+      margin: 0 5px 0 0;
       border: 2px solid #56ccc8;
       cursor: pointer;
       cursor: hand;
@@ -86,13 +82,13 @@
       }
     }
     .comment-add-text {
-      position: relative;
+
       display: inline-block;
-      width: 166px;
+      width: 58%;
       height: 49px;
-      margin: 0 20px 0 0;
+      margin: 0 5px 0 0;
       textarea {
-        width: 166px;
+        width: 90%;
         height: 49px;
         border: 2px solid #56ccc8;
         resize: none;
@@ -105,8 +101,9 @@
     .send-button {
       position: relative;
       display: inline-block;
-      width: 49px;
+      width: 33.5%;
       height: 49px;
+      margin: 0 5px 0 0;
       background: #56ccc8;
       cursor: pointer;
       cursor: hand;
@@ -118,7 +115,27 @@
         line-height: 22px;
         @include centerr;
       }
-
+    }
+    .alert-container{
+      display: inline-block;
+      vertical-align: top;
+      width: 52.2%;
+      height: 49px;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      .alert-first {
+        display: none;
+        margin-top: 10px;
+        font-size: 125%;
+        color: #ff0000;
+      }
+      .alert-second {
+        display: none;
+        margin-top: 10px;
+        font-size: 125%;
+        color: #ff0000;
+      }
     }
   }
   .comment-container {

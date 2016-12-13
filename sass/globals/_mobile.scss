@@ -24,35 +24,36 @@
     margin-top: 20px;
   }
   .paragraph {
-    max-width: 320px !important;
+    max-width: 350px !important;
+    height: auto !important;
     overflow: visible;
+    text-align: justify;
     p {
-      width: 300px !important;
+      width: 350px !important;
     }
     a {
       width: 100%;
       top: 83%;
       left: 55% !important;
-      padding: 0 20px 0 20px !important;
     }
   }
   .content {
-    max-width: 320px !important;
+    max-width: 350px !important;
   }
   .right-side-bar {
     display: none;
   }
   .comment-button {
-    width: 120px !important;
+    width: 33% !important;
     height: 49px !important;
     margin: 0 2px 0 0 !important;
   }
   .comment-add-text {
     margin: 0 2px 0 0 !important;
-    width: 120px !important;
+    width: 64% !important;
     height: 49px !important;
     #comment-textarea {
-      width: 120px !important;
+      width: 90% !important;
       height: 49px !important;
       margin: 0 2px 0 0 !important;
     }
