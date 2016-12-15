@@ -83,7 +83,6 @@
       }
     }
     .comment-add-text {
-
       display: inline-block;
       width: 58%;
       height: 49px;
@@ -94,6 +93,7 @@
         border: 2px solid #56ccc8;
         resize: none;
         text-align: center;
+        padding: 10px 0;
       }
     }
     .send-button :hover{
@@ -160,6 +160,7 @@
     }
   }
 }
+
 
 .inline-object {
   display: inline;

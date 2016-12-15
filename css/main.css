@@ -59,13 +59,10 @@ body, html {
   .paragraph {
     max-width: 350px !important;
     height: auto !important;
-    overflow: visible; }
+    overflow: visible;
+    text-align: justify; }
     .paragraph p {
       width: 350px !important; }
-    .paragraph a {
-      width: 100%;
-      top: 83%;
-      left: 55% !important; }
 
   .content {
     max-width: 350px !important; }
@@ -181,7 +178,8 @@ body, html {
         height: 49px;
         border: 2px solid #56ccc8;
         resize: none;
-        text-align: center; }
+        text-align: center;
+        padding: 10px 0; }
     .content-wrapper .comments .send-button :hover {
       font-weight: 600; }
     .content-wrapper .comments .send-button {

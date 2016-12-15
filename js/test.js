@@ -13,36 +13,36 @@ $(document).ready(function(){
     var $nospace = $('.nospace');
     var $paragraph = $('.paragraph');
     var $paragraphText = $('.paragraph p');
-    var $readLess = $('.readless');
+
+    //variables
+
     var wordplacement = 57;
-    var textlength;
     var readMore = 'Read&nbspMore';
-
-
-    putReadmore($paragraphText,wordplacement,readMore);
+    var readLess = 'Read&nbspLess';
+    
+    putReadmore($paragraphText,wordplacement,readMore,readLess);
 
     //hidden on load
 
     $commentTextareawrapper.hide();
     $sendButton.hide();
     $alert.hide();
-    $readLess.hide();
 
     //click listeners
 
     $paragraphText.find('.readmore').on('click', function(){
         var $this = $(this);
         $this.hide('fast', function(){
-            //css ;/ .hide() .show() turn display into inline-block, solution is to add a function, but it's still not the optimal way..
+            //css ;/ .hide() .show() turns display into inline-block, solution is to add a function, but it's still not the optimal way..
             $paragraph.find('p span').css('display', 'inline').show(function(){
-                $readLess.show();
+                $paragraphText.find('.readless').show();
             });
         });
     });
 
-    $readLess.on('click', function(){
+    $paragraphText.find('.readless').on('click', function(){
         var $this = $(this);
-        $this.hide('fast', function(){
+        $this.hide('slow', function(){
             $paragraph.find('p span').hide('fast', function(){
                 $paragraphText.find('.readmore').show();
             });
@@ -52,6 +52,7 @@ $(document).ready(function(){
 
     $commentButton.on('click', function(){
         clearAll();
+        $commentTextarea.val('');
         $commentTextareawrapper.toggle('fast', function(){
             $sendButton.toggle('fast');
         });
@@ -75,6 +76,7 @@ $(document).ready(function(){
                 });
 
                 clearAll();
+                $commentTextarea.val('');
             } else {
                 $nospace.fadeIn('fast');
             }
@@ -96,28 +98,36 @@ $(document).ready(function(){
     }
 
 
-    function putReadmore(textcontainer,wordplacement,readMore){
+    function putReadmore(textcontainer,wordplacement,readMore,readLess){
 
         var wordplace = wordplacement;
         var words = $.trim(textcontainer.html()).split(" ");
-        textlength = words.length;
+        var textlength = words.length;
 
         if(textlength < wordplacement){wordplace = textlength}
 
         words.splice(wordplace,0,'<a class="readmore">'+ readMore + '</a>');
         words.splice(++wordplace,0,'<span>');
+
+        var newtextlenght = words.length;
+
+        words.splice(newtextlenght,0,'<a class="readless">' + readLess +'</a>');
+
         var wordsTostring = words.toString();
         var text = (wordsTostring.replace(/,,/g,'&#44')).replace(/,/g,' ');
+
         textcontainer.html(text);
     }
 
 
-    //comment deletion
+    //comment deletion + counter
 
     $(document).on('click','.delete-button', function(){
+        var currCommentvalue = $commentCounterspan.text();
+        currCommentvalue = --currCommentvalue;
+        $commentCounterspan.text(currCommentvalue);
         $(this).parent().remove();
     });
-
 });
 
 
