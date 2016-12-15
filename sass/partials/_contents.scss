@@ -35,7 +35,7 @@
     overflow-y: hidden;
     overflow-x: hidden; //firefox ;/
     width: 499px;
-    height: 105px;
+    height: auto;
     margin: 29px 0 0 0;
     p {
       width: 485px;
@@ -50,6 +50,7 @@
     }
     a {
       color: #ea6060;
+      font-size: 15px;
       text-decoration: none;
       cursor: pointer;
       cursor: hand;
@@ -124,17 +125,11 @@
       text-align: center;
       padding: 0;
       margin: 0;
-      .alert-first {
-        display: none;
+      .alerts {
         margin-top: 10px;
         font-size: 125%;
-        color: #ff0000;
-      }
-      .alert-second {
-        display: none;
-        margin-top: 10px;
-        font-size: 125%;
-        color: #ff0000;
+        color: #dcffff;
+        background-color: #ba1437;
       }
     }
   }
@@ -166,4 +161,7 @@
   }
 }
 
+.inline-object {
+  display: inline;
+}
 
